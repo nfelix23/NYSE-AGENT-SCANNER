@@ -7,12 +7,16 @@ from dotenv import load_dotenv
 # Load environment variables from .env file
 load_dotenv()
 
-# List of 20 NYSE tickers to monitor
+# List of tickers to monitor (from portfolio)
 TICKERS = [
-    "AAPL", "MSFT", "GOOGL", "VIST", "META",
-    "NVDA", "TSLA", "JPM", "V", "MU",
-    "WMT", "NU", "CRWV", "ONDS", "GGAL",
-    "NFLX", "CEPU", "EDN", "BMA", "LOMA"
+    "ARK", "SCCO", "WMT", "CBOE", "BABA", "GOOG",
+    "ARKK", "AMZN", "CRESY", "WDOFF", "META", "GOOGL",
+    "NVDA", "NEM", "AXP", "PMPIX", "BCOM", "VIST",
+    "MELI", "EEM", "MU", "ARGT", "STNE", "VALE",
+    "SCHD", "USDU", "BANM", "TSLA", "ARKW", "LOMA",
+    "COIN", "RBOT", "FCX", "YPF", "CNCX", "AADR",
+    "ONDS", "DESP", "BLK", "GOLD", "ETORO", "GOOGL",
+    "PYPL", "CRWD", "MARA", "CIRQ", "EXOD", "CGAU"
 ]
 
 # SMA Configuration

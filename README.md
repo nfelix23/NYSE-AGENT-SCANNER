@@ -7,7 +7,7 @@ Sistema automatizado para detectar oportunidades de inversión en acciones del N
 
 ## 🎯 Características
 
-- 📈 Análisis de 20 acciones del NYSE configurables
+- 📈 Análisis de múltiples acciones del NYSE/mercados internacionales (configurables)
 - 📊 Cálculo de SMA-29 y dispersión porcentual
 - 🎨 Generación de gráficos individuales para cada acción
 - 📧 Alertas automáticas por email
@@ -137,10 +137,10 @@ delete_windows_task.bat
 Edita `config.py` para personalizar:
 
 ```python
-# Acciones a monitorear (hasta 20)
+# Acciones a monitorear (puedes agregar las que quieras)
 TICKERS = [
-    "AAPL", "MSFT", "GOOGL", "VIST", "META",
-    "NVDA", "TSLA", "JPM", "V", "MU",
+    "ARK", "SCCO", "WMT", "CBOE", "BABA", "GOOG",
+    "ARKK", "AMZN", "CRESY", "WDOFF", "META", "GOOGL",
     # ... más acciones
 ]
 

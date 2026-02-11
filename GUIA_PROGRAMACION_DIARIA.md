@@ -161,7 +161,7 @@ generate_charts=False,
 
 Cuando se ejecuta automáticamente a las 9 AM:
 
-1. ✅ Descarga datos de las 20 acciones del NYSE
+1. ✅ Descarga datos de las acciones configuradas (48 por defecto)
 2. ✅ Calcula el SMA-29 y dispersión para cada una
 3. ✅ Identifica oportunidades de COMPRA y VENTA
 4. ✅ Genera gráficos individuales para cada acción (opcional)

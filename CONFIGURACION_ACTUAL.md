@@ -10,35 +10,26 @@ Este documento muestra la configuración activa del NYSE Stock Scanner.
 | **Dispersion Threshold** | ±15.0% | Umbral para generar alertas de BUY/SELL |
 | **Lookback Days** | 60 días | Días de datos históricos a descargar |
 
-## 📈 Acciones Monitoreadas (20)
+## 📈 Acciones Monitoreadas (48)
 
 Las siguientes acciones se analizan diariamente:
 
 ```
-1. AAPL  - Apple Inc.
-2. MSFT  - Microsoft Corporation
-3. GOOGL - Alphabet Inc.
-4. VIST  - Vista Energy
-5. META  - Meta Platforms Inc.
-
-6. NVDA  - NVIDIA Corporation
-7. TSLA  - Tesla Inc.
-8. JPM   - JPMorgan Chase & Co.
-9. V     - Visa Inc.
-10. MU   - Micron Technology
-
-11. WMT  - Walmart Inc.
-12. NU   - Nu Holdings Ltd.
-13. CRWV - CrowdVision
-14. ONDS - Ondas Holdings Inc.
-15. GGAL - Grupo Financiero Galicia
-
-16. NFLX - Netflix Inc.
-17. CEPU - Central Puerto
-18. EDN  - Empresa Distribuidora Norte
-19. BMA  - Banco Macro
-20. LOMA - Loma Negra
+ARK Innovation ETF, Southern Copper, Walmart, CBOE Global Markets,
+Alibaba, Google, ARK Innovation ETF, Amazon, CRESY,
+Wisdomtree, Meta, Google, NVIDIA, Newmont, American Express,
+Principal Millennials ETF, Broadcom, Vista Energy, MercadoLibre,
+iShares MSCI Emerging Markets, Micron Technology, Global X MSCI Argentina,
+StoneCo, Vale, Schwab US Dividend Equity ETF, Wisdomtree Bloomberg US Dollar,
+Banco Macro, Tesla, ARK Next Gen Internet, Loma Negra,
+Coinbase, RBOT ETF, Freeport-McMoRan, YPF, Concentrix,
+iShares MSCI All Country Asia ex Japan, Ondas Holdings, Despegar,
+BlackRock, Barrick Gold, eToro Group, Google,
+PayPal, CrowdStrike, Marathon Digital, Ciruqs, Exodus Movement,
+CGAu Resources
 ```
+
+Ver lista completa en [config.py](config.py)
 
 ## 📧 Configuración de Email
 
