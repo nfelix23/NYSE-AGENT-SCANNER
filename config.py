@@ -9,14 +9,12 @@ load_dotenv()
 
 # List of tickers to monitor (from portfolio)
 TICKERS = [
-    "ARK", "SCCO", "WMT", "CBOE", "BABA", "GOOG",
-    "ARKK", "AMZN", "CRESY", "WDOFF", "META", "GOOGL",
-    "NVDA", "NEM", "AXP", "PMPIX", "BCOM", "VIST",
-    "MELI", "EEM", "MU", "ARGT", "STNE", "VALE",
-    "SCHD", "USDU", "BANM", "TSLA", "ARKW", "LOMA",
-    "COIN", "RBOT", "FCX", "YPF", "CNCX", "AADR",
-    "ONDS", "DESP", "BLK", "GOLD", "ETORO", "GOOGL",
-    "PYPL", "CRWD", "MARA", "CIRQ", "EXOD", "CGAU"
+    "ARK", "SCCO", "WMT", "CBOE", "BABA", "GOOGL",
+    "ARKK", "AMZN", "CRESY", "BMA","GGAL","CEPU", "META", "CRESY",
+    "NVDA", "IRS", "SLV", "YPF", "PAM", "VIST","EDN", "TEO","TGS","TS",
+    "MELI", "SPY", "MU", "ARGT", "NU", "VALE",
+    "TSLA", "ARKK", "LOMA",
+    "COIN", "RBOT", "ONDS", "NBIS", "GLD", "PYPL", "CRWV", "MARA", "CIRQ", "EXOD", "CGAU"
 ]
 
 # SMA Configuration

@@ -126,9 +126,10 @@ LOOKBACK_DAYS = 60  # Días de histórico a descargar
 
 El sistema está configurado para ejecutarse automáticamente:
 - **Hora:** 9:00 AM
-- **Frecuencia:** Diaria (Lunes a Domingo)
+- **Frecuencia:** Lunes a Viernes (días hábiles del mercado)
+- **Fines de semana:** Automáticamente omitidos
 - **Acciones:**
-  1. Descargar datos de las 20 acciones
+  1. Descargar datos de las acciones configuradas
   2. Calcular SMA-29 y dispersión
   3. Identificar oportunidades (BUY/SELL)
   4. Generar gráficos individuales

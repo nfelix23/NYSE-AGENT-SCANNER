@@ -26,9 +26,22 @@ logger = logging.getLogger(__name__)
 def scheduled_scan():
     """
     Scheduled scan job that runs the full analysis and sends email alerts.
+    Only executes on weekdays (Monday to Friday).
     """
+    # Check if today is a weekday (0=Monday, 6=Sunday)
+    today = datetime.now().weekday()
+    day_name = datetime.now().strftime('%A')
+
+    if today >= 5:  # Saturday (5) or Sunday (6)
+        logger.info("="*70)
+        logger.info(f"SCAN SKIPPED - {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+        logger.info(f"Today is {day_name} (weekend) - Market is closed")
+        logger.info("Next scan will run on Monday")
+        logger.info("="*70 + "\n")
+        return
+
     logger.info("="*70)
-    logger.info(f"SCHEDULED SCAN STARTED - {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+    logger.info(f"SCHEDULED SCAN STARTED - {datetime.now().strftime('%Y-%m-%d %H:%M:%S (%A)')}")
     logger.info("="*70)
 
     try:
@@ -65,8 +78,9 @@ def run_scheduler(scan_time: str = "09:00"):
     logger.info("="*70)
     logger.info("NYSE STOCK SCANNER - SCHEDULER STARTED")
     logger.info("="*70)
-    logger.info(f"Scheduled scan time: {scan_time} daily")
-    logger.info(f"Current time: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+    logger.info(f"Scheduled scan time: {scan_time} (Monday-Friday only)")
+    logger.info(f"Current time: {datetime.now().strftime('%Y-%m-%d %H:%M:%S (%A)')}")
+    logger.info("Market hours: Weekdays only (Saturday & Sunday will be skipped)")
     logger.info("Press Ctrl+C to stop the scheduler")
     logger.info("="*70 + "\n")
 
@@ -94,10 +108,12 @@ if __name__ == "__main__":
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Examples:
-  python scheduler.py                    # Run daily at 09:00 (default)
-  python scheduler.py --time 14:30       # Run daily at 14:30
+  python scheduler.py                    # Run weekdays at 09:00 (default)
+  python scheduler.py --time 14:30       # Run weekdays at 14:30
   python scheduler.py --run-now          # Run immediately and then continue schedule
   python scheduler.py --once             # Run once and exit (no scheduling)
+
+Note: Scans only run Monday-Friday (market days). Weekend runs are automatically skipped.
         """
     )
 
